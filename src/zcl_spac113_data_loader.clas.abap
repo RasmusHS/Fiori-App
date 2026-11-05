@@ -34,26 +34,31 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
   METHOD fill_table.
 *                                  ÆNDR TABELNAVNET
 *                                  vvvvvvvvvvvvvvvv
-    DATA: temp_table TYPE TABLE OF  zspac113_stock .
+    DATA: temp_table TYPE TABLE OF  zspac113_product .
 *                                  ^^^^^^^^^^^^^^^^
 
     temp_table = VALUE #(
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 *   Ændr data herunder, når du vil fylde data på andre tabeller
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-      ( warehouse_id = 1 product_id = 1 amount =   3 )
-      ( warehouse_id = 3 product_id = 4 amount =  42 )
-      ( warehouse_id = 2 product_id = 5 amount =   1 )
-      ( warehouse_id = 3 product_id = 5 amount = 321 )
-      ( warehouse_id = 3 product_id = 1 amount =  20 )
-      ( warehouse_id = 1 product_id = 5 amount =   9 )
-      ( warehouse_id = 2 product_id = 3 amount =   5 )
-      ( warehouse_id = 3 product_id = 2 amount =   4 )
-      ( warehouse_id = 1 product_id = 4 amount =   0 )
-      ( warehouse_id = 3 product_id = 3 amount =   8 )
-      ( warehouse_id = 1 product_id = 3 amount = 100 )
-      ( warehouse_id = 1 product_id = 2 amount =   7 )
-      ( warehouse_id = 2 product_id = 4 amount =   0 )
+      "( warehouse_id = 1 product_id = 1 amount =   3 )
+      "( warehouse_id = 3 product_id = 4 amount =  42 )
+      "( warehouse_id = 2 product_id = 5 amount =   1 )
+      "( warehouse_id = 3 product_id = 5 amount = 321 )
+      "( warehouse_id = 3 product_id = 1 amount =  20 )
+      "( warehouse_id = 1 product_id = 5 amount =   9 )
+      "( warehouse_id = 2 product_id = 3 amount =   5 )
+      "( warehouse_id = 3 product_id = 2 amount =   4 )
+      "( warehouse_id = 1 product_id = 4 amount =   0 )
+      "( warehouse_id = 3 product_id = 3 amount =   8 )
+      "( warehouse_id = 1 product_id = 3 amount = 100 )
+      "( warehouse_id = 1 product_id = 2 amount =   7 )
+      "( warehouse_id = 2 product_id = 4 amount =   0 )
+      ( product_id = 1 prod_name = 'Product 1' prod_description = 'The 1st' )
+      ( product_id = 2 prod_name = 'Product 2' prod_description = 'The 2nd' )
+      ( product_id = 3 prod_name = 'Product 3' prod_description = 'The 3rd' )
+      ( product_id = 4 prod_name = 'Product 4' prod_description = 'The 4th' )
+      ( product_id = 5 prod_name = 'Product 5' prod_description = 'The 5th' )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 *   Ændr data herover, når du vil fylde data på andre tabeller
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,7 +67,7 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
     TRY.
 *            ÆNDR TABELNAVNET
 *            vvvvvvvvvvvvvvvv
-      INSERT  zspac113_stock  FROM TABLE @( CORRESPONDING #( temp_table ) ).
+      INSERT  zspac113_product  FROM TABLE @( CORRESPONDING #( temp_table ) ).
 *            ^^^^^^^^^^^^^^^^
 
     CATCH cx_sy_open_sql_db INTO DATA(lx).
@@ -77,7 +82,7 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
 
 *               ÆNDR TABELNAVNET
 *               vvvvvvvvvvvvvvvv
-    DELETE FROM  zspac113_stock .
+    DELETE FROM  zspac113_product .
 *               ^^^^^^^^^^^^^^^^
 
     IF sy-subrc <> 0.
