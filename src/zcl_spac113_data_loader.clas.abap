@@ -34,7 +34,7 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
   METHOD fill_table.
 *                                  ÆNDR TABELNAVNET
 *                                  vvvvvvvvvvvvvvvv
-    DATA: temp_table TYPE TABLE OF  zspac113_product .
+    DATA: temp_table TYPE TABLE OF  zspac113_wh .
 *                                  ^^^^^^^^^^^^^^^^
 
     temp_table = VALUE #(
@@ -54,11 +54,14 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
       "( warehouse_id = 1 product_id = 3 amount = 100 )
       "( warehouse_id = 1 product_id = 2 amount =   7 )
       "( warehouse_id = 2 product_id = 4 amount =   0 )
-      ( product_id = 1 prod_name = 'Product 1' prod_description = 'The 1st' )
-      ( product_id = 2 prod_name = 'Product 2' prod_description = 'The 2nd' )
-      ( product_id = 3 prod_name = 'Product 3' prod_description = 'The 3rd' )
-      ( product_id = 4 prod_name = 'Product 4' prod_description = 'The 4th' )
-      ( product_id = 5 prod_name = 'Product 5' prod_description = 'The 5th' )
+      "( product_id = 1 prod_name = 'Product 1' prod_description = 'The 1st' )
+      "( product_id = 2 prod_name = 'Product 2' prod_description = 'The 2nd' )
+      "( product_id = 3 prod_name = 'Product 3' prod_description = 'The 3rd' )
+      "( product_id = 4 prod_name = 'Product 4' prod_description = 'The 4th' )
+      "( product_id = 5 prod_name = 'Product 5' prod_description = 'The 5th' )
+      ( warehouse_id = 1 street = 'Falkevej 14' zip_code = 6700 city = 'Esbjerg' name = 'Reden' )
+      ( warehouse_id = 2 street = 'Hjulmagervej 14' zip_code = 9000 city = 'Aalborg' name = 'Norden' )
+      ( warehouse_id = 3 street = 'Dofovej 2B' zip_code = 7100 city = 'Vejle' name = 'Fjord' )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 *   Ændr data herover, når du vil fylde data på andre tabeller
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,7 +70,7 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
     TRY.
 *            ÆNDR TABELNAVNET
 *            vvvvvvvvvvvvvvvv
-      INSERT  zspac113_product  FROM TABLE @( CORRESPONDING #( temp_table ) ).
+      INSERT  zspac113_wh  FROM TABLE @( CORRESPONDING #( temp_table ) ).
 *            ^^^^^^^^^^^^^^^^
 
     CATCH cx_sy_open_sql_db INTO DATA(lx).
@@ -82,7 +85,7 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
 
 *               ÆNDR TABELNAVNET
 *               vvvvvvvvvvvvvvvv
-    DELETE FROM  zspac113_product .
+    DELETE FROM  zspac113_wh .
 *               ^^^^^^^^^^^^^^^^
 
     IF sy-subrc <> 0.
