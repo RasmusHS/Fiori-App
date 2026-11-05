@@ -11,17 +11,6 @@ define root view entity ZR_SPAC113_STOCK
   key product_id as ProductId,
   amount as Amount,
   
-  //_Product.product_id as ProductId,
-  _Product.prod_name as ProdName,
-  _Product.prod_description as ProdDescription,
-  
-  //_Warehouse.warehouse_id as WarehouseId,
-  _Warehouse.street as Street,
-  _Warehouse.zip_code as ZipCode,
-  _Warehouse.city as City,
-  _Warehouse.name as Name,
-  
   _Product,
   _Warehouse
-  //_association_name // Make association public
 }
