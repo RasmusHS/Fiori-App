@@ -5,10 +5,12 @@
 define root view entity ZC_SPAC113_STOCK
   provider contract transactional_query as projection on ZR_SPAC113_STOCK
 {
+  @EndUserText.label: 'Warehouse'
   @ObjectModel.text.element: ['WarehouseName']
   @UI.textArrangement: #TEXT_ONLY
   key WarehouseId,
   
+  @EndUserText.label: 'Product'
   @ObjectModel.text.element: ['ProductName']
   @UI.textArrangement: #TEXT_ONLY
   key ProductId,
