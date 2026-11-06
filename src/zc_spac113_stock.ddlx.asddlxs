@@ -1,0 +1,49 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Stock',
+  typeNamePlural: 'Stock',
+  title:       { type: #STANDARD, value: 'ProductName' },
+  description: { type: #STANDARD, value: 'WarehouseName' }
+}
+annotate entity ZC_SPAC113_STOCK
+  with 
+{
+  @UI.facet: [{
+    id: 'Stock',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Stock',
+    position: 10
+   }]
+   
+  @UI.lineItem:       [{ position: 10, label: 'Warehouse' }]
+  @UI.identification: [{ position: 10, label: 'Warehouse' }]
+  @UI.selectionField: [{ position: 10 }]
+  WarehouseId;
+
+  @UI.lineItem:       [{ position: 20, label: 'Product' }]
+  @UI.identification: [{ position: 20, label: 'Product' }]
+  @UI.selectionField: [{ position: 20 }]
+  ProductId;
+
+  @UI.lineItem:       [{ position: 30, label: 'Amount' }]
+  @UI.identification: [{ position: 30, label: 'Amount' }]
+  Amount;
+
+  @UI.lineItem:       [{ position: 40, label: 'Description' }]
+  @UI.identification: [{ position: 40, label: 'Description' }]
+  ProductDescription;
+
+  @UI.lineItem:       [{ position: 50, label: 'City' }]
+  @UI.identification: [{ position: 50, label: 'Address' }]
+  WarehouseCity; 
+
+  @UI.identification: [{ position: 60, label: 'Street' }]
+  WarehouseStreet;
+
+  @UI.identification: [{ position: 70, label: 'Zip code' }]
+  WarehouseZipCode;
+
+  @UI.identification: [{ position: 80, label: 'Last changed at' }]
+  LocalLastChangedAt;
+}

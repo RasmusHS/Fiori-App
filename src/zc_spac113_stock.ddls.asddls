@@ -1,6 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Projection View'
 @Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define root view entity ZC_SPAC113_STOCK
   provider contract transactional_query as projection on ZR_SPAC113_STOCK
 {
@@ -12,6 +13,11 @@ define root view entity ZC_SPAC113_STOCK
   @UI.textArrangement: #TEXT_ONLY
   key ProductId,
   Amount,
+  LocalCreatedBy,
+  LocalCreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt,
   
   _Product.prod_name as ProductName,
   _Product.prod_description as ProductDescription,
