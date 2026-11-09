@@ -4,7 +4,7 @@ with draft;
 
 define behavior for ZR_SPAC113_WH alias Warehouse
 persistent table zspac113_wh
-draft table zspac113_prod_d
+draft table zspac113_wh_d
 etag master LocalLastChangedAt
 lock master total etag LastChangedAt
 authorization master ( instance )
