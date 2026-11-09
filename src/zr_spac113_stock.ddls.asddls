@@ -7,7 +7,9 @@ define root view entity ZR_SPAC113_STOCK
   association [1..1] to zspac113_wh as _Warehouse on $projection.WarehouseId = _Warehouse.warehouse_id
   //composition of target_data_source_name as _association_name
 {
+  @EndUserText.label: 'Warehouse ID'
   key warehouse_id as WarehouseId,
+  @EndUserText.label: 'Product ID'
   key product_id as ProductId,
   amount as Amount,
   @Semantics.user.createdBy: true
