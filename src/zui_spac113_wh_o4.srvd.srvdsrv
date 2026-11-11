@@ -1,0 +1,4 @@
+@EndUserText.label: 'WH Service Definition'
+define service ZUI_SPAC113_WH_O4 {
+  expose ZC_SPAC113_WH;
+}

@@ -3,6 +3,7 @@ strict ( 2 );
 use draft;
 
 define behavior for ZC_SPAC113_WH alias Warehouse
+use etag
 {
   use create;
   use update;

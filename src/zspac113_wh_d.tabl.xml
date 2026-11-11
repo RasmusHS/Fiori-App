@@ -9,6 +9,7 @@
     <CLIDEP>X</CLIDEP>
     <LANGDEP>X</LANGDEP>
     <DDTEXT>Draft table for entity ZR_SPAC113_WH</DDTEXT>
+    <MASTERLANG>E</MASTERLANG>
     <CONTFLAG>A</CONTFLAG>
     <EXCLASS>4</EXCLASS>
    </DD02V>
@@ -115,6 +116,12 @@
      <GROUPNAME>%ADMIN</GROUPNAME>
     </DD03P>
    </DD03P_TABLE>
+   <TABL_EXTRAS>
+    <TDDAT>
+     <TABNAME>ZSPAC113_WH_D</TABNAME>
+     <CCLASS>CUS_DEV_SUP_DA</CCLASS>
+    </TDDAT>
+   </TABL_EXTRAS>
   </asx:values>
  </asx:abap>
 </abapGit>

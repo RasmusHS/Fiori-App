@@ -59,9 +59,9 @@ CLASS zcl_spac113_data_loader IMPLEMENTATION.
       "( product_id = 3 prod_name = 'Product 3' prod_description = 'The 3rd' )
       "( product_id = 4 prod_name = 'Product 4' prod_description = 'The 4th' )
       "( product_id = 5 prod_name = 'Product 5' prod_description = 'The 5th' )
-      ( warehouse_id = 1 street = 'Falkevej 14' zip_code = 6700 city = 'Esbjerg' name = 'Reden' )
-      ( warehouse_id = 2 street = 'Hjulmagervej 14' zip_code = 9000 city = 'Aalborg' name = 'Norden' )
-      ( warehouse_id = 3 street = 'Dofovej 2B' zip_code = 7100 city = 'Vejle' name = 'Fjord' )
+      ( warehouse_id = 1 street = 'Falkevej 14' zip_code = 6700 city = 'Esbjerg' warehouse_name = 'Reden' )
+      ( warehouse_id = 2 street = 'Hjulmagervej 14' zip_code = 9000 city = 'Aalborg' warehouse_name = 'Norden' )
+      ( warehouse_id = 3 street = 'Dofovej 2B' zip_code = 7100 city = 'Vejle' warehouse_name = 'Fjord' )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 *   Ændr data herover, når du vil fylde data på andre tabeller
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

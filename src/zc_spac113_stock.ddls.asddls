@@ -30,5 +30,5 @@ define root view entity ZC_SPAC113_STOCK
   _Warehouse.street as WarehouseStreet,
   _Warehouse.zip_code as WarehouseZipCode,
   _Warehouse.city as WarehouseCity,
-  _Warehouse.name as WarehouseName
+  _Warehouse.warehouse_name as WarehouseName
 }

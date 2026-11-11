@@ -1,0 +1,38 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Warehouse', typeNamePlural: 'Warehouses',
+  title:       { type: #STANDARD, value: 'WarehouseName' },
+  description: { type: #STANDARD, value: 'City' }
+}
+annotate entity ZC_SPAC113_WH with
+{
+  @UI.facet: [
+    { id: 'General', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE,
+      label: 'General', position: 10 },
+    { id: 'Address', purpose: #STANDARD, type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Address', label: 'Address', position: 20 }
+  ]
+  
+  @UI.lineItem:       [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  WarehouseId;
+  
+  @UI.lineItem:       [{ position: 30 }]
+  @UI.fieldGroup:     [{ qualifier: 'Address', position: 10 }]
+  Street;
+
+  @UI.lineItem:       [{ position: 40 }]
+  @UI.fieldGroup:     [{ qualifier: 'Address', position: 20 }]
+  ZipCode;
+
+  @UI.lineItem:       [{ position: 50 }]
+  @UI.fieldGroup:     [{ qualifier: 'Address', position: 30 }]
+  @UI.selectionField: [{ position: 20 }]
+  City;
+  
+   @UI.lineItem:       [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @UI.selectionField: [{ position: 10 }]
+  WarehouseName;
+  
+}

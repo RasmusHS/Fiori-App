@@ -17,7 +17,7 @@ define root view entity ZR_SPAC113_WH
   city as City,
   
   @EndUserText.label: 'Warehouse Name'
-  name as WarehouseName,
+  warehouse_name as WarehouseName,
   
   @Semantics.user.createdBy: true
   local_created_by as LocalCreatedBy,

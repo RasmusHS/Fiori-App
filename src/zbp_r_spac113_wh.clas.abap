@@ -1,15 +1,5 @@
-class ZBP_R_SPAC113_WH definition
-  public
-  abstract
-  final
-  create public .
-
-public section.
-protected section.
-private section.
+CLASS zbp_r_spac113_wh DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_spac113_wh.
 ENDCLASS.
 
-
-
-CLASS ZBP_R_SPAC113_WH IMPLEMENTATION.
+CLASS zbp_r_spac113_wh IMPLEMENTATION.
 ENDCLASS.

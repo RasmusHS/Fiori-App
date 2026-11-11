@@ -29,7 +29,7 @@ authorization master ( instance )
     Street = street;
     ZipCode = zip_code;
     City = city;
-    WarehouseName = name;
+    WarehouseName = warehouse_name;
     LocalCreatedBy     = local_created_by;
     LocalCreatedAt     = local_created_at;
     LocalLastChangedBy = local_last_changed_by;
