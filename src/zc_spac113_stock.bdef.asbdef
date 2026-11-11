@@ -2,7 +2,7 @@ projection;
 strict ( 2 );
 use draft;
 
-define behavior for ZC_SPAC113_STOCK //alias <alias_name>
+define behavior for ZC_SPAC113_STOCK alias Stock
 use etag
 {
   use create;
